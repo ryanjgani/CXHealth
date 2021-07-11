@@ -9,6 +9,7 @@ const passport = require("passport");
 const localStrategy = require("passport-local");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
+const favicon = require("serve-favicon");
 
 const connectDB = require("./config/db");
 const Appointment = require("./models/appointments");
@@ -29,6 +30,7 @@ connectDB();
 // View Engine
 const app = express();
 
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
