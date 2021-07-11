@@ -30,10 +30,10 @@ For admin access:
   JWT_KEY
   MONGO_KEY
 ```
-JWT_KEY is for JWT authentication  
-MONGO_KEY is to connect to MongoDB Atlas  
-You should also insert your own MongoDB Atlas URL and store your password in MONGO_KEY.  
-Or you can also use your local MongoDB URL  
+**JWT_KEY** stores the secret key for JWT authentication  
+**MONGO_KEY** stores the database password to connect to MongoDB Atlas  
+You should insert your own MongoDB Atlas URL and store your password in MONGO_KEY  
+Or you can use your local MongoDB URL  
 
 ```bash
   'mongodb://localhost:27017/<database_name>'
