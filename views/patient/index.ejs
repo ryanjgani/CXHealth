@@ -7,8 +7,9 @@
             <% for(let appointment of appointments) { %>
                 <div class="card shadow mb-4 p-3" style="border-radius: 20px;">
                     <div class="card-body bg-white">
-                        <h5 class="card-title">Dr. <%= appointment.doctor.name %>
-                        </h5>
+                        <div class="card special shadow d-inline-flex mb-4">
+                            <h5 class="px-3 py-2 my-auto">Dr. <%= appointment.doctor.name %>
+                        </div>
                         <p class="card-text">
                             <small class="text-muted">
                                 <%= appointment.doctor.specialty %>

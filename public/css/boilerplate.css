@@ -11,3 +11,9 @@ h1 {
 .bi {
     color: #78dec7;
 }
+
+.special {
+    background-color: #0a1931;
+    color: white;
+    border-radius: 10px;
+}
