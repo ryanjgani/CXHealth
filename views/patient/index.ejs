@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate')%>
+
+    <h1 class="mb-4">Appointments</h1>
+
+    <div class="row mb-4">
+        <div class="col">
+            <% for(let appointment of appointments) { %>
+                <div class="card shadow mb-4 p-3" style="border-radius: 20px;">
+                    <div class="card-body bg-white">
+                        <h5 class="card-title">Dr. <%= appointment.doctor.name %>
+                        </h5>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <%= appointment.doctor.specialty %>
+                            </small>
+                        </p>
+                        <p class="card-text">
+                            <%= appointment.description %>
+                        </p>
+                        <a class="btn btn-primary" href="/patient/appointments/<%=appointment._id%>">View Appointment</a>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div><!-- row -->

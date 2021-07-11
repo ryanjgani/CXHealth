@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate')%>
+
+    <h1 class="mb-5">My Appointments</h1>
+
+    <div class="row">
+        <div class="col">
+            <% if(registrations.length) { %> 
+                <% for(let registration of registrations) { %>
+                    <div class="card shadow mb-4 p-3" style="border-radius: 20px;">
+                        <div class="card-body bg-white">
+                            <h5 class="card-title">Dr. <%= registration.appointment.doctor.name %>
+                            </h5>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <%= registration.appointment.doctor.specialty %>
+                                </small>
+                            </p>
+                            <p class="card-text">
+                                <%= registration.appointment.description %>
+                            </p>
+                            <a class="btn btn-primary" href="/patient/appointments/<%=registration.appointment._id%>">View Appointment</a>
+                        </div>
+                    </div>
+                <% } %>
+            <% } else { %> 
+                <div class="col-6 offset-3">
+                    <div class="row">
+                        <div class="card d-inline-block shadow border-0 mb-4" style="background-color: #FEF7DC;border-radius: 20px;">
+                            <div class="card-body rounded">
+                                <h5 class="text-center my-auto">You have no registrations!</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <a href="/patient/appointments" class="card-link"><button class="btn btn-success justify-items-center">View Appointments</button></a>
+                    </div>
+                    
+                </div>
+            <% } %> 
+        </div>
+    </div><!-- row -->

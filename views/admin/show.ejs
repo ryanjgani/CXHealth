@@ -1,0 +1,86 @@
+<% layout('layouts/boilerplate')%>
+    <link rel="stylesheet" href="/css/show.css">
+
+    <h1 class="mb-3">APPOINTMENT with Dr. <%= appointment.doctor.name %>
+    </h1>
+    <div class="row">
+        <div class="col">
+            <div class="card shadow mb-4 px-2" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="px-2">
+                            <div class="card special shadow d-inline-flex mb-4 w-100">
+                                <h5 class="px-3 py-2 my-auto">Appointment Information</h5>
+                            </div>    
+                        </div>
+                        <div class="w-50 d-inline-block">
+                            <div class="px-2">
+                                <h5 class="card-title">Doctor Name: Dr. <%= appointment.doctor.name %>
+                                </h5>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <%= appointment.doctor.specialty %>
+                                    </small>
+                                </p>
+                                <p class="card-text">
+                                    <%= appointment.description %>
+                                </p>
+                                <p class="card-text">
+                                    Max number of registrants: <%= appointment.registrantLimit %>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="w-50">
+                        <% if(registrations.length) { %> 
+                            <!-- <div class="card shadow border-0 p-2" style="border-radius: 20px;">
+                                <div class="card-body bg-white rounded"> -->
+                                    <table id="table" class="table table-light table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Patient Name</th>
+                                            <th scope="col">Registration Date</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <% for(let i = 0; i < registrations.length; i++) { %>
+                                        <tr>
+                                            <td scope="row"><%= i + 1 %></td>
+                                            <td><%= registrations[i].patient.firstName %> <%= registrations[i].patient.lastName %></td>
+                                            <td><%= registrations[i].registered_at.toLocaleString() %></td>
+                                            <td>
+                                                <form class="d-inline ml-2" action="/admin/appointments/<%=appointment._id%>/<%=registrations[i]._id%>/cancel"
+                                                method="POST">
+                                                    <button type="submit" class="btn btn-sm btn-danger ">Delete</button>
+                                                </form> 
+                                            </td>
+                                        </tr>
+                                        <% } %>
+                                        </tbody>
+                                    </table>
+                                <!-- </div>
+                            </div> -->
+                        <% } else { %> 
+                            <div class="card shadow border-0 p-2" style="background-color: #FEF7DC;border-radius: 20px;">
+                                <div class="card-body rounded">
+                                    <h5 class="text-center">You have 0 registrants here!</h5>
+                                </div>
+                            </div>
+                        <% } %> 
+                    </div>
+                    <div class="mt-3 mb-1">
+                        <a href="/admin/appointments" class="card-link"><button class="btn btn-success ">Back</button></a>
+                        <a href="/admin/appointments/<%= appointment._id %>/edit" class="card-link ml-2"><button
+                                class="btn btn-primary ">Edit</button></a>
+                        <form class="d-inline ml-2" action="/admin/appointments/<%=appointment._id%>?_method=DELETE"
+                            method="POST">
+                            <button type="submit" class="btn btn-danger ">Delete</button>
+                        </form> 
+
+                    </div>
+                </div>
+            </div><!-- card -->
+        </div><!-- inner col -->
+    </div><!-- row -->
+

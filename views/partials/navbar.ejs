@@ -1,0 +1,30 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Health</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <% if (currentUser) { %> 
+                <a class="nav-link" href="/patient/appointments">Dashboard</a>
+                <% } %> 
+                <% if (currentUser && currentUser.role === "patient") { %> 
+                    <a class="nav-link" href="/patient/appointments/myappointments">My Appointments</a>
+                <% } %> 
+                <% if (currentUser && currentUser.role === "admin") { %>
+                    <a class="nav-link" href="/admin/appointments/new">New Appointment</a>
+                <% } %>  
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) { %> 
+                <a href="/login" class="nav-link">Login</a>
+                <a href="/register" class="nav-link">Register</a>
+                <% } else { %> 
+                <a href="/logout" class="nav-link">Logout</a>
+                <% } %> 
+            </div>
+        </div>
+    </div>
+</nav>

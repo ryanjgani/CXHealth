@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate')%>
+
+
+    <h1 class="mb-4 text-center">EDIT APPOINTMENT</h1>
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <div class="card shadow mb-4" style="border-radius: 20px;">
+                <div class="card-body p-4">
+                    <form action="/admin/appointments/<%= appointment._id %>?_method=PUT" method="POST" novalidate class="validated-form">
+                        <div class="form-group mb-3">
+                            <label for="doctor">Doctor</label>
+                            <select class="form-select" name="doctor" id="doctor" aria-label="doctor" required>
+`                                <% for(let doctor of doctors) { %> 
+                                    <option value="<%= doctor.id %>" <%= doctor.id === appointment.doctor.id ? "selected" : "" %> ><%= doctor.name %> - <%= doctor.specialty %> </option>
+                                <% } %> 
+                            </select>
+                        </div>
+                        <!-- <div class="form-group mb-3">
+                            <label for="specialty">Select Time</label>
+                            <input type="text" class="form-control" name="specialty" id="specialty" aria-describedby="specialty"
+                                placeholder="Enter Specialty">
+                        </div> -->
+                        <div class="mb-3">
+                            <label class="form-label" for="Comment">Comments</label>
+                            <textarea class="form-control" name="description" id="description" cols="30" rows="3" required><%= appointment.description %> </textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="registrantLimit">Max Number of Registrations: </label>
+                            <input type="number" name="registrantLimit" value="<%= appointment.registrantLimit %>" id="registrantLimit">
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a class="card-link btn btn-primary" href="/admin/appointments/<%= appointment._id %>">Back</a>
+                            <button type="submit" class="ml-2 btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
