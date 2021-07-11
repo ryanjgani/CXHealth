@@ -43,12 +43,13 @@ Or you can also use your local MongoDB URL
   node app.js
 ```
 4. Type http://localhost:3000/ into a browser
+
+
 ## Code Organization
 <img src="images/files.png" width="100">
 
 ## Database Schema
-<img src="images/models.png" width="100">
-![App Screenshot](https://github.com/ryanjgani/Health_v1.git/images/models.png)
+<img src="images/models.png" width="500">
 
   
 ## How to Use
