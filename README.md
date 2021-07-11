@@ -49,7 +49,7 @@ Or you can use your local MongoDB URL
 <img src="images/files.png" width="100">
 
 ## Database Schema
-
+<img src="images/models.png" width="500">
 
   
 ## How to Use
