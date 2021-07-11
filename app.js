@@ -10,18 +10,14 @@ const localStrategy = require("passport-local");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const favicon = require("serve-favicon");
+const morgan = require("morgan");
 
 const connectDB = require("./config/db");
-const Appointment = require("./models/appointments");
-const Doctor = require("./models/doctors");
-const User = require("./models/users");
-
 const userRoutes = require("./routes/users");
 const adminRoutes = require("./routes/admin");
 const patientRoutes = require("./routes/patient");
 const ExpressError = require("./utils/ExpressError");
 const CatchAsync = require("./utils/CatchAsync");
-const morgan = require("morgan");
 const isAuth = require("./middleware/check-auth");
 
 //MongoDB Connection
@@ -54,16 +50,10 @@ const sessionConfig = {
     },
 };
 
-app.use(session(sessionConfig)); //for cookies
+app.use(session(sessionConfig));
+
+//Flash Configuration
 app.use(flash());
-
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new localStrategy(User.authenticate()));
-
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
 app.use((req, res, next) => {
     res.locals.currentUser = null;
     res.locals.success = req.flash("success");
@@ -78,20 +68,15 @@ app.get("/", (req, res) => {
 //Routes
 app.use("/", userRoutes); //for user routes
 
+//Authentication Middleware
 app.use(isAuth);
 
+//Routes
 app.use("/admin/appointments", adminRoutes); //for admin routes
 app.use("/patient/appointments", patientRoutes); //for patient routes
 
-// Patient routes
-app.get("/patient/appointments", async (req, res) => {
-    const appointments = await Appointment.find({});
-    res.render("patient/index", { appointments });
-});
-
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page Not Found", 404));
-    //hitting next means its going to hit the error handler at the bottom
 });
 
 app.use((err, req, res, next) => {
