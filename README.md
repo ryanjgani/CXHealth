@@ -69,6 +69,10 @@ There are 3 main parts in this application:
     - Patients can cancel their appointment.  
     - Patients cannot apply for an appointment with a fully booked registrant.  
 
+## Technology
+Frontend: EJS, Bootstrap  
+Backend: Express JS, Node JS  
+Database: MongoDB  
 
 
 
