@@ -12,6 +12,10 @@ h1 {
     color: #78dec7;
 }
 
+.navbar {
+    transition: background-color 1s ease 0s;
+}
+
 .special {
     background-color: #0a1931;
     color: white;
