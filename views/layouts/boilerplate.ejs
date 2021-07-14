@@ -15,22 +15,27 @@
 
     <!-- boilerplate css stylesheet -->
     <link rel="stylesheet" href="/css/boilerplate.css">
+    <link rel="stylesheet" href="/css/style.css">
+
 
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-row min-vh-100">
 
     <!-- navbar -->
-    <%- include('../partials/navbar')%>
+    <%- include('../partials/sidebar')%>
 
         <!-- main -->
-        <main class="container mt-5">
-            <%- include('../partials/flash') %>
-            <%- body %>
+        <main class="home_content d-inline-block">
+            <div class="main_div container pb-5 w-60">
+                <%- include('../partials/flash') %>
+                <%- body %>
+            </div>
+            
         </main>
 
         <!-- footer -->
-        <%- include('../partials/footer')%>
+        <!-- <%- include('../partials/footer')%> -->
 
             <!-- popper js -->
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
