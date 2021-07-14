@@ -13,9 +13,9 @@ This personal project is submitted for COMPFEST UI 2021 to join their Software E
 
 ### Patient View
 <img src="images/screenshots/dashboard.png" width="500">
-<img src="images/screenshots/patients_appointments.png" width="500">
+<img src="images/screenshots/patient_appointments.png" width="500">
 <img src="images/screenshots/patients_register_fail.png" width="500">
-<img src="images/screenshots/patients_register.png" width="500">
+<img src="images/screenshots/patient_register.png" width="500">
 
 ### Admin View
 <img src="images/screenshots/admin_show.png" width="500">
