@@ -4,6 +4,20 @@
 Health is a Hospital Information/Management System for doctors, hospital admins, and patients. 
 This personal project is submitted for COMPFEST UI 2021 to join their Software Engineering Academy.
 
+## Screenshots
+### Home Page
+<img src="images/screenshots/home_page.png" width="500">
+
+### Patient View
+<img src="images/screenshots/patients_dashboard-min.png" width="500">
+<img src="images/screenshots/patients_myappointments-min.png" width="500">
+<img src="images/screenshots/patients_register_fail-min.png" width="500">
+<img src="images/screenshots/patients_register_success-min.png" width="500">
+
+### Admin View
+<img src="images/screenshots/admin_appointment_show-min.png" width="500">
+<img src="images/screenshots/admin_appointment_create-min.png" width="500">
+
 
 ## Demo
 
