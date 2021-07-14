@@ -8,15 +8,18 @@ This personal project is submitted for COMPFEST UI 2021 to join their Software E
 ### Home Page
 <img src="images/screenshots/home_page.png" width="500">
 
+### Dashboard
+<img src="images/screenshots/dashboard.png" width="500">
+
 ### Patient View
-<img src="images/screenshots/patients_dashboard-min.png" width="500">
-<img src="images/screenshots/patients_myappointments-min.png" width="500">
-<img src="images/screenshots/patients_register_fail-min.png" width="500">
-<img src="images/screenshots/patients_register_success-min.png" width="500">
+<img src="images/screenshots/dashboard.png" width="500">
+<img src="images/screenshots/patients_appointments.png" width="500">
+<img src="images/screenshots/patients_register_fail.png" width="500">
+<img src="images/screenshots/patients_register.png" width="500">
 
 ### Admin View
-<img src="images/screenshots/admin_appointment_show-min.png" width="500">
-<img src="images/screenshots/admin_appointment_create-min.png" width="500">
+<img src="images/screenshots/admin_show.png" width="500">
+<img src="images/screenshots/admin_create.png" width="500">
 
 
 ## Demo
