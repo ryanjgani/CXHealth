@@ -5,23 +5,29 @@ Health is a Hospital Information/Management System for doctors, hospital admins,
 This personal project is submitted for COMPFEST UI 2021 to join their Software Engineering Academy.
 
 ## Screenshots
-### Home Page
+#### Home Page
 <img src="images/screenshots/home.png" width="500">
 
-### Dashboard
+#### Dashboard
 <img src="images/screenshots/dashboard.png" width="500">
 
-### Patient View
+#### Patient View
 <img src="images/screenshots/dashboard.png" width="500">
 <img src="images/screenshots/patient_appointments.png" width="500">
 <img src="images/screenshots/patients_register_fail.png" width="500">
 <img src="images/screenshots/patient_register.png" width="500">
 
-### Admin View
+#### Admin View
 <img src="images/screenshots/admin_show.png" width="500">
 <img src="images/screenshots/admin_appointment_create.png" width="500">
 
-
+### Dark Mode
+#### Dashboard
+<img src="images/screenshots/dashboard_dark.png" width="500">
+#### Patient View
+<img src="images/screenshots/patient_dark.png" width="500">
+#### Admin View
+<img src="images/screenshots/admin_dark.png" width="500">
 ## Demo
 
 https://warm-bastion-81767.herokuapp.com/
