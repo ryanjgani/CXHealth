@@ -23,11 +23,14 @@ This personal project is submitted for COMPFEST UI 2021 to join their Software E
 
 ### Dark Mode
 #### Dashboard
-<img src="images/screenshots/dashboard_dark.png" width="500">
+<img src="images/screenshots/dashboard_dark.png" width="500">  
+
 #### Patient View
-<img src="images/screenshots/patient_dark.png" width="500">
+<img src="images/screenshots/patient_dark.png" width="500">  
+
 #### Admin View
-<img src="images/screenshots/admin_dark.png" width="500">
+<img src="images/screenshots/admin_dark.png" width="500">  
+
 ## Demo
 
 https://warm-bastion-81767.herokuapp.com/
