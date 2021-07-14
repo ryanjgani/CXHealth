@@ -15,7 +15,7 @@
             <i class='bx bx-home' ></i>
             <span class="links_name">Home</span>
             </a>
-            <span class="tooltip">Home</span>
+            <span class="tooltip text-dark">Home</span>
         </li>
         <% if (currentUser) { %> 
             <li>
@@ -23,7 +23,7 @@
                 <i class='bx bx-grid-alt' ></i>
                 <span class="links_name">Dashboard</span>
                 </a>
-                <span class="tooltip">Dashboard</span>
+                <span class="tooltip text-dark">Dashboard</span>
             </li>
         <% } %> 
         <% if (currentUser && currentUser.role === "patient") { %> 
@@ -32,7 +32,7 @@
                 <i class='bx bx-user' ></i>
                 <span class="links_name">My Appointments</span>
                 </a>
-                <span class="tooltip">My Appointments</span>
+                <span class="tooltip text-dark">My Appointments</span>
             </li>
         <% } %> 
         <% if (currentUser && currentUser.role === "admin") { %>
@@ -41,19 +41,23 @@
                 <i class='bx bx-user' ></i>
                 <span class="links_name">New Appointment</span>
                 </a>
-                <span class="tooltip">New Appointment</span>
+                <span class="tooltip text-dark">New Appointment</span>
             </li>
       <% } %>  
+        <li class="btn-toggle">
+          <i class='bx bx-sun' ></i>
+        </li>
     
         <li class="profile_content mb-3">
         <div class="profile">
-            <div class="profile_details">
+            <!-- <div class="profile_details">
             <div class="name_job">
                 <span>sdcnsdkj</span>
                 <div class="name"><h5>Hi Ryan</h5></div>
                 <div class="job">Web Designer</div>
             </div>
-            </div>
+            </div> -->
+            <a href="/login"><i class='bx bx-log-out' id="log_out" ></i></a>
             <a href="/login"><i class='bx bx-log-out' id="log_out" ></i></a>
         </div>
         </li>

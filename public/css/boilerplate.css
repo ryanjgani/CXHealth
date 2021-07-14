@@ -16,8 +16,22 @@ h1 {
     transition: background-color 1s ease 0s;
 }
 
+.special_main {
+    background-color: #0a1931;
+    color: white;
+    border-radius: 10px;
+}
+
 .special {
     background-color: #0a1931;
     color: white;
     border-radius: 10px;
+}
+
+.btn-toggle {
+    cursor: pointer;
+}
+
+.btn-toggle i:hover {
+    color: #0d6efd;
 }
