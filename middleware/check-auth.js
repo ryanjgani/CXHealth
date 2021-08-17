@@ -1,28 +1,5 @@
 const jwt = require("jsonwebtoken");
 
-// const isAuth = (req, res, next) => {
-//     const token = req.cookies.jwt;
-//     console.log(token);
-
-//     if (token) {
-//         console.log("success");
-//         jwt.verify(token, process.env.JWT_KEY, (err, decodedToken) => {
-//             if (err) {
-//                 req.flash("error", "err.message");
-//                 res.redirect("/login");
-//             } else {
-//                 console.log(decodedToken);
-//                 next();
-//             }
-//         });
-//     } else {
-//         console.log("fail");
-
-//         req.flash("error", "You are not logged in!");
-//         res.redirect("/login");
-//     }
-// };
-
 const isAuth = async (req, res, next) => {
     const token = req.cookies.jwt;
     if (!token) {
@@ -52,8 +29,4 @@ const isAuth = async (req, res, next) => {
     }
 };
 
-// const isAuth = (req, res, next) => {
-//     console.log("isauth middleware!");
-//     next();
-// };
 module.exports = isAuth;
