@@ -16,6 +16,11 @@ h1 {
     transition: background-color 1s ease 0s;
 }
 
+.btn-success {
+    background-color: #17d7a0;
+    border-color: #17d7a0;
+}
+
 .special_main {
     background-color: #0a1931;
     color: white;

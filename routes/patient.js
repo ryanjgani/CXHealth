@@ -12,15 +12,17 @@ const {
 } = require("../controllers/patient");
 
 router.use(isAuth);
+
+router.get("/", getAppointment);
+
 router.use((req, res, next) => {
-    if (req.user.role !== "patient") {
-        res.redirect("/");
+    if (!req.user || req.user.role !== "patient") {
+        req.flash("error", "Please login to make an appointment");
+        res.redirect("/login");
     } else {
         next();
     }
 });
-
-router.get("/", getAppointment);
 
 router.get("/myappointments", myAppointments);
 

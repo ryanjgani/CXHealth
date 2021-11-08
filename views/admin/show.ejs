@@ -63,18 +63,21 @@
                                 <!-- </div>
                             </div> -->
                         <% } else { %> 
-                            <div class="card shadow border-0 p-2" style="background-color: #FEF7DC;border-radius: 20px;">
+                            <div class="ms-auto">
+                                <h3 class="d-inline-block"><span class="badge bg-info p-3 ms-auto">No patients have registered!</span></h3>
+                            </div>
+                            <!-- <div class="card shadow border-0 p-2" style="background-color: #FEF7DC;border-radius: 20px;">
                                 <div class="card-body rounded">
                                     <h5 class="text-center">You have 0 registrants here!</h5>
                                 </div>
-                            </div>
+                            </div> -->
                         <% } %> 
                     </div>
                     <div class="mt-3 mb-1">
                         <a href="/admin/appointments" class="card-link"><button class="btn btn-success ">Back</button></a>
-                        <a href="/admin/appointments/<%= appointment._id %>/edit" class="card-link ml-2"><button
+                        <a href="/admin/appointments/<%= appointment._id %>/edit" class="card-link ms-2"><button
                                 class="btn btn-primary ">Edit</button></a>
-                        <form class="d-inline ml-2" action="/admin/appointments/<%=appointment._id%>?_method=DELETE"
+                        <form class="d-inline ms-2" action="/admin/appointments/<%=appointment._id%>?_method=DELETE"
                             method="POST">
                             <button type="submit" class="btn btn-danger ">Delete</button>
                         </form> 
