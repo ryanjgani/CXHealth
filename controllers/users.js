@@ -35,7 +35,7 @@ module.exports.postRegisterForm = async (req, res) => {
         }
     } catch (e) {
         req.flash("error", e.message);
-        res.redirect("/register");
+        res.redirect("/");
     }
 };
 
@@ -60,11 +60,11 @@ module.exports.postLoginForm = async (req, res) => {
     } catch (e) {
         console.error(e);
         req.flash("error", "Wrong Username or Password");
-        res.redirect("/login");
+        res.redirect("/");
     }
 };
 
 module.exports.logout = (req, res) => {
     res.clearCookie("jwt", { httpOnly: true });
-    res.redirect("/login");
+    res.redirect("/");
 };
