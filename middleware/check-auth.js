@@ -24,9 +24,11 @@ const isAuth = async (req, res, next) => {
             next();
         } catch (e) {
             console.log(
-                `Token ${token} verification failed due to reason: ${e.message}`
+                `Token verification failed due to reason: ${e.message}`
             );
-            res.redirect("/");
+            next();
+            // res.json({ message: e.message });
+            // res.redirect("/");
         }
     }
 };

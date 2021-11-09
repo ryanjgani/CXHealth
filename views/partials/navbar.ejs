@@ -1,11 +1,10 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent" id="navbarNavAltMarkupp">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Health</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <a class="navbar-brand" href="/">Health</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav">
                 <a class="nav-link" href="/patient/appointments">Dashboard</a>
                 <% if (currentUser && currentUser.role === "patient") { %> 
@@ -25,4 +24,4 @@
             </div>
         </div>
     </div>
-</nav>
+  </nav>
