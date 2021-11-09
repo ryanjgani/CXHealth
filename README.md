@@ -41,7 +41,7 @@ This personal project is submitted for COMPFEST UI 2021 to join their Software E
 
 ## Demo
 
-https://warm-bastion-81767.herokuapp.com/
+https://pure-atoll-92801.herokuapp.com/
 
 For admin access:
 
@@ -96,17 +96,23 @@ Or you can use your local MongoDB URL
 
 ## How to Use
 
-There are 3 main parts in this application:  
- 1. **Authentication** - There are two types of account roles: Administrator and Patient  
- - JWT is used for authentication and stored in cookies  
- - You can register as many Patients as you want, however there is only one Admin account  
- 2. **Administor Roles** - Administrator can create a new doctor appointment  
- - Administrator can update and delete doctor appointments. - Administrator can see a list of patients that are registered in each appointment.  
- 3. **Patient Roles**  
- - Patients can see a list of appointments.  
- - Patients can apply for an appointment.  
- - Patients can cancel their appointment.  
- - Patients cannot apply for an appointment with a fully booked registrant.
+There are 3 main parts in this application:
+
+1.  **Authentication** - There are two types of account roles: Administrator and Patient
+
+-   JWT is used for authentication and stored in cookies
+-   You can register as many Patients as you want, however there is only one Admin account
+
+2.  **Administor Roles** - Administrator can create a new doctor appointment
+
+-   Administrator can update and delete doctor appointments. - Administrator can see a list of patients that are registered in each appointment.
+
+3.  **Patient Roles**
+
+-   Patients can see a list of appointments.
+-   Patients can apply for an appointment.
+-   Patients can cancel their appointment.
+-   Patients cannot apply for an appointment with a fully booked registrant.
 
 ## Technology
 
