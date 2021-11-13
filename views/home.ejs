@@ -21,9 +21,7 @@
 
 <body class="h-100">
     <div class="d-flex flex-column h-100">
-        <div class="container mt-2">
             <%- include('./partials/navbar')%>
-        </div>
         
         <div class="container col-xxl-8 px-4 py-5">
             <%- include('./partials/flash') %>
@@ -32,11 +30,11 @@
                 <img src="assets/imgs/hospital.png" class="d-block mx-lg-auto img-fluid"width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3 text-lg-start text-center">Health</h1>
-                <p class="lead text-lg-start text-center">Welcome to Health! <br> Jump right in and meet our many doctors. <br>
-                    Feel free to make an appointment and check our services!</p>
+                <h1 class="display-5 fw-bold lh-1 mb-3 text-lg-start text-center">CX Health</h1>
+                <p class="lead text-lg-start text-center">Welcome to CX Health! <br> Lorem, Temporibus, incidunt? <br>
+                    Lorem ipsum dolor sit amet tur aliquam.</p>
                 <div class="d-grid gap-2 d-flex justify-content-center justify-content-lg-start mt-3">
-                    <a href="/patient/appointments" class="btn btn_outline_blue btn-lg px-4 me-sm-3">Get Started</a>
+                    <a href="/dashboard" class="btn btn_outline_blue btn-lg px-4 me-sm-3">Get Started</a>
                     
                     <% if(!currentUser) { %> 
                         <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn_outline_blue btn-lg px-4 me-sm-3">Login</button>
@@ -47,7 +45,7 @@
             </div>
         </div>
         <footer class="d-flex mx-auto mt-auto justify-content-center">
-            <p class="text-dark">&copy; Health 2021 </p>
+            <p class="text-dark">&copy; CX Health 2021 </p>
         </footer>
     </div>
     <!-- Login Modal -->
@@ -60,10 +58,10 @@
                 <form action="/login" method="POST" novalidate class="validated-form">
                     <div class="modal-body p-4">
                         <div class="mb-3">
-                            <label class="form-label" for="username">Username</label>
-                            <input class="form-control" type="text" name="username" id="username" required>
-                            <div class="valid-feedback">
-                                Looks good!
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-control" type="text" name="email" id="email" required>
+                            <div class="invalid-feedback">
+                                Please input a valid email
                             </div>
                         </div>
                         <div class="mb-3">
@@ -92,45 +90,17 @@
                 <form action="/register" method="POST" novalidate class="validated-form">
                     <div class="modal-body p-4">
                         <div class="mb-3">
-                            <label class="form-label" for="firstName">First Name</label>
-                            <input class="form-control" type="text" name="firstName" id="firstName" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="lastName">Last Name</label>
-                            <input class="form-control" type="text" name="lastName" id="lastName" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="age">Age</label>
-                            <input class="form-control" type="number" name="age" id="age" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="username">Username</label>
-                            <input class="form-control" type="text" name="username" id="username" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="mb-3">
                             <label class="form-label" for="email">Email</label>
                             <input class="form-control" type="email" name="email" id="email" required>
-                            <div class="valid-feedback">
-                                Looks good!
+                            <div class="invalid-feedback">
+                                Please input a valid email
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="password">Password</label>
-                            <input class="form-control" type="password" name="password" id="password" required>
-                            <div class="valid-feedback">
-                                Looks good!
+                            <input class="form-control" type="password" minlength="6" name="password" id="password" required>
+                            <div class="invalid-feedback">
+                                Password should be at least 6 characters
                             </div>
                         </div>
                         <div class="d-flex justify-content-end">

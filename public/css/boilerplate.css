@@ -1,5 +1,5 @@
 body {
-    background-color: #e8f0f2;
+    background-color: #ebebed;
     font-family: "Poppins", sans-serif;
 }
 
@@ -39,4 +39,9 @@ h1 {
 
 .btn-toggle i:hover {
     color: #0d6efd;
+}
+
+.bg-green {
+    background-color: #005d63;
+    color: white;
 }

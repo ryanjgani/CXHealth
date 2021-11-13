@@ -9,31 +9,29 @@ const passport = require("passport");
 const localStrategy = require("passport-local");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
-const favicon = require("serve-favicon");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/users");
-const adminRoutes = require("./routes/admin");
-const patientRoutes = require("./routes/patient");
+const dashboardRoutes = require("./routes/earnings");
+// const dashboardRoutes = require("./routes/earnings")
 const ExpressError = require("./utils/ExpressError");
 const CatchAsync = require("./utils/CatchAsync");
 const isAuth = require("./middleware/check-auth");
 
 //MongoDB Connection
-connectDB();
+// connectDB();
 
 // View Engine
 const app = express();
 
-app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public"))); //to serve public assets in the "public" directory
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(cookieParser());
 
 //session configuration
@@ -72,8 +70,7 @@ app.get("/", (req, res) => {
 app.use("/", userRoutes); //for user routes
 
 //Routes
-app.use("/admin/appointments", adminRoutes); //for admin routes
-app.use("/patient/appointments", patientRoutes); //for patient routes
+app.use("/", dashboardRoutes);
 
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page Not Found", 404));

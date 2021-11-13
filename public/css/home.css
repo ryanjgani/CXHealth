@@ -12,19 +12,15 @@
 } */
 body {
     height: 100vh;
-    /* background-color: #e8f0f2; */
-    background: rgb(232, 240, 242);
+    background: rgb(235, 235, 237);
     background: linear-gradient(
         90deg,
-        rgba(232, 240, 242, 1) 18%,
-        rgba(255, 255, 255, 1) 48%
+        rgba(235, 235, 237, 1) 18%,
+        rgba(255, 255, 255, 0) 48%
     );
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(https://images.unsplash.com/photo-1495202337139-e865ed70fcd4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80); */
     background-size: cover;
     background-position: center;
-    /* text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5); */
+
     font-family: "Poppins", sans-serif;
 }
 .home-nav {
@@ -56,8 +52,8 @@ body {
 
 .btn_outline_blue {
     background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOGNkMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwOGNkMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
-    background: -moz-linear-gradient(0deg, #00afdc, #00afdc);
-    background: -webkit-linear-gradient(0deg, #00afdc, #00afdc);
+    background: -moz-linear-gradient(0deg, #005d63, #005d63);
+    background: -webkit-linear-gradient(0deg, #005d63, #005d63);
     background-size: 0% 100%;
     background-repeat: no-repeat;
     background-position: left top;
@@ -70,13 +66,17 @@ body {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     border-radius: 12px;
-    border: 1px solid #00afdc;
-    color: #00afdc;
+    border: 1px solid #005d63;
+    color: #005d63;
 }
 
 .btn-success {
     background-color: #17d7a0;
     border-color: #17d7a0;
+}
+.bg-green {
+    background-color: #005d63;
+    color: white;
 }
 
 .btn_outline_blue:hover {
